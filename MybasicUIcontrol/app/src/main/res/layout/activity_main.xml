@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="vertical">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_launcher_foreground" />
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteTextView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="15dp"
+        android:ems="10" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Example of checkbox"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="30dp" />
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv1"
+            android:text="Do you like me"
+            android:layout_centerHorizontal="true"/>
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Do you like android "
+            android:checked="false"
+            android:layout_below="@+id/checkbox"
+            android:layout_alignLeft="@+id/checkbox"
+            android:layout_alignStart="@+id/checkbox" />
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/checkBox2"
+            android:text="Ok"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Example of togglebutton"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="30dp" />
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="On"
+            android:id="@+id/toggleButton"
+            android:checked="true"
+            android:layout_toEndOf="@+id/button2"
+            android:layout_below="@+id/tv2"/>
+
+        <ToggleButton
+            android:id="@+id/toggleButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/toggleButton"
+            android:layout_marginLeft="65dp"
+            android:checked="true"
+            android:text="Off" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button2"
+            android:text="Click me"
+            android:layout_below="@+id/toggleButton"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Example of RadioButton"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="30dp" />
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_alignLeft="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv2"
+            android:layout_centerHorizontal="true">
+            <RadioButton
+                android:id="@+id/radioButton"
+                android:layout_width="142dp"
+                android:layout_height="wrap_content"
+                android:text="Java"
+                android:textSize="20dp"
+                android:textColor="@android:color/holo_red_light"
+                android:checked="false"/>
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:text="Android"
+                android:textSize="20dp"
+                android:textColor="@android:color/holo_red_light"
+                android:checked="false"/>
+            <RadioButton
+                android:id="@+id/radioButton3"
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:text="HTML"
+                android:textSize="20dp"
+                android:textColor="@android:color/holo_red_light"
+                android:checked="false"/>
+        </RadioGroup>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button3"
+            android:text="Click me"
+            android:layout_below="@+id/radiogroup"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:text="Category:"
+            android:layout_marginBottom="5dp"/>
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dialog"
+            android:prompt="@string/prompt_text"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv3"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="pick time"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+        <Button
+            android:id="@+id/set_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/timepicker"
+            android:layout_marginBottom="30dp"
+            android:onClick="setTime"
+            android:text="Save"/>
+
+        <TimePicker
+            android:id="@+id/timepicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tv3"
+            android:layout_marginBottom="24dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv4"
+            android:layout_alignLeft="@+id/timepicker"
+
+            android:layout_below="@+id/set_button"
+            android:text="Time current"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        <TextView
+            android:id="@+id/tv5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv4"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:text="Time Select"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </RelativeLayout>
+</LinearLayout>
+</ScrollView>

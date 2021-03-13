@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My basic UI control</string>
+    <string name="spinner">spinner</string>
+    <string name="prompt_text">Choose one</string>
+</resources>
